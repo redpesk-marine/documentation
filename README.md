@@ -40,7 +40,7 @@ Are excluded from goals:
 
 ## API based Micro Service Architecture
 
-The application architecture is directly inherited from AGL[^1] and is based on latest version of the application framework[^4].
+The application architecture is directly inherited from AGL[^1] and is based on latest version of the application framework[^3].
 
 Within Automotive Grade Linux, each micro service exposes an API that can be requested independently from used message transport layer (REST, UnixSocket, RAM, ...) and from its location (edge, cloud). Application and cybersecurity protection is done through a mixt of kernel mandatory access (SMack, SELinux) and Access control data base as Cynara.
 
@@ -62,7 +62,7 @@ When talking with the cloud or an external device (I.e. phone, tablet) the appli
 
 ![micro-service security model](images/smack-token-security.png)
 
-For further details on security model check AGL security blueprint [^5]
+For further details on security model check AGL security blueprint [^4]
 
 ## Core Services
 
@@ -70,21 +70,21 @@ While Redpesk@SEA is fully open an may potentially support any kind of services.
 
 ### Signaling
 
-Automotive Linux support in its current version CAN and J1939. For Redpesk@SEA, IoT.bzh already added support for CanOpen and Modbus as well as as a reverse engineered version of NMEA2000[^6] based on Canboat[^7] and other works.
+Automotive Linux support in its current version CAN and J1939. For Redpesk@SEA, IoT.bzh already added support for CanOpen and Modbus as well as as a reverse engineered version of NMEA2000[^5] based on Canboat[^6] and other works.
 
 Signaling split into low level binding that are in charge of decoding a binary message (N2K, CanOpen, Modbus, ...) into a high level structure that is easy to process by an application. Second level is handled by the signal composer that is in charge of composing message to build a functional signal when the boat moved more than 300m. The goal is this model is to reduce as close as possible from the acquisition the number of processed messages.
 
 ![micro-service signaling model](images/signalling-service-archi-Intro.png)
 
-For further details on signaling model check[^8]
+For further details on signaling model check[^7]
 
 ### Chart & Routing
 
 Redpesk@SEA aims at providing core low level chart service. A full UI as OpenCPN or QtVLM remains out of scope. Nevertheless we aim at providing a strong chart core set of chart services to help that the community to easily develop multiple user interfaces targeting the difference class of maritime users (leisure, fisherman, researcher, ship-yard, harbour, ...).
 
-In a first run, chart service should be able to provide a vector tile service compatible with Mapbox. Chart service should support both a realtime service to serve tiles on demand to UI clients through a standard set of APIs, as well as an out of band service to translate with GDAL or equivalent technology charts from their delivery format(S57,S101,...) into a set of vector tiles compatible with Mapbox vector tiles format[^9]
+In a first run, chart service should be able to provide a vector tile service compatible with Mapbox. Chart service should support both a realtime service to serve tiles on demand to UI clients through a standard set of APIs, as well as an out of band service to translate with GDAL or equivalent technology charts from their delivery format(S57,S101,...) into a set of vector tiles compatible with Mapbox vector tiles format[^8]
 
-We also target a basic "safe routing" service. This service might leverage H3 Uber’s Hexagonal Hierarchical Spatial Index [^10] to provide a electronic version of "second captain" that permanently controls if current boat direction is safe or not. The initial version might be limited to static information like maritime charts sounding information or AIS history, nevertheless on in a second version we should also leverage dynamic information as Radar, realtime sounding, ...
+We also target a basic "safe routing" service. This service might leverage H3 Uber’s Hexagonal Hierarchical Spatial Index [^9] to provide an electronic version of "second captain" that permanently controls if current boat direction is safe or not. The initial version might be limited to static information like maritime charts sounding information or AIS history, nevertheless in a second version we should also leverage dynamic information as Radar, realtime sounding, ...
 
 ![micro-service chart model](images/chart-service-archi-Intro.png)
 
@@ -118,7 +118,7 @@ Redpesk@SEA inherits from Automotive Linux application framework monitoring capa
 
 ### Multimedia
 
-Audio requirement for Automotive is probably too complex for maritime usage and redpesk@sea might only use a subset of AGL audio system. Nevertheless some key functionalities as zones, roles, priorities, ... may soon because hard requirements. At minimum we target:
+Audio requirement for Automotive is probably too complex for maritime usage and redpesk@sea might only use a subset of AGL audio system. Nevertheless some key functionalities as zones, roles, priorities, ... may soon become hard requirements. At minimum we target:
 
 * a service to play basic multimedia stream as MPD *(Multimedia Player Daemon)*
 * a priority service to play emergency sounds *(anchor, AIS, flooding, ...)*
@@ -133,11 +133,11 @@ In order to minimize the impact on existing Linux applications, the system shoul
 
 [^1]: http://automotivelinux.org
 [^2]: http://redpesk.bzh
-[^4]: https://iot.bzh/en/publications/40-2020/107-agl-amm-july20-appfw-perfs
-[^5]: http://iot.bzh/download/public/2018/Security/AGL-Security-blueprint_v5.0.0.pdf
-[^6]: https://www.nmea.org/Assets/20090423%20rtcm%20white%20paper%20nmea%202000.pdf
-[^7]: https://github.com/canboat/canboat
-[^8]: https://iot.bzh/en/publications/32-2018/92-updated-overview-of-agl-signaling
-[^9]: https://docs.mapbox.com/vector-tiles/specification/
-[^10]: https://eng.uber.com/h3/
+[^3]: https://iot.bzh/en/publications/40-2020/107-agl-amm-july20-appfw-perfs
+[^4]: http://iot.bzh/download/public/2018/Security/AGL-Security-blueprint_v5.0.0.pdf
+[^5]: https://www.nmea.org/Assets/20090423%20rtcm%20white%20paper%20nmea%202000.pdf
+[^6]: https://github.com/canboat/canboat
+[^7]: https://iot.bzh/en/publications/32-2018/92-updated-overview-of-agl-signaling
+[^8]: https://docs.mapbox.com/vector-tiles/specification/
+[^9]: https://eng.uber.com/h3/
 
