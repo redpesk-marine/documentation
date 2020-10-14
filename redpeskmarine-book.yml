@@ -1,0 +1,11 @@
+type: books
+books:
+  - id: redpeskmarine-book
+    title: "Overview"
+    description:
+    keywords:
+    author:
+    version: master
+    chapters:
+      - url: "README.md"
+        name: Introduction
