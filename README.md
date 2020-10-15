@@ -1,4 +1,4 @@
-# Introduction:
+# Introduction
 
 This project targets a production ready marine grade Linux open platform. Its application and security model derives directly from Automotive Grade Linux[^1] efforts, when production readiness and long term support relies on IoT.bzh continuous integration redpesk[^2] suite.
 
@@ -46,7 +46,7 @@ Within Automotive Grade Linux, each micro service exposes an API that can be req
 
 Microservice based architecture are very flexible. They typically allow to split or group service within the same or different devices depending on production requirements. From a developer point of view the fact that a service run into an external 'gateway' or within the same SOC is 100% transparent. Obviously service location still impacts performances or security model, but the flexibility provided by the architecture allows to run the same code on different implementation (i.e. low cost versus full feature system).
 
-![general micro service architecture](images/micro-service-archi-Intro.png)
+![general micro service architecture](images/micro-service-archi-Intro.png){:: style="margin:auto; display:flex; max-width:80%;"}
 
 Previous graphic represents a full feature system. An entry cost system could use the same services with only one gateway and without any display. On the other hand, high-end systems may require multiple screens (chart-table, cabin, cockpit, ...). Note that the architecture also represents a Linux microcontroller dedicated to critical services. Those critical/safety services may either run in a fully external device based on a STM32 or equivalent device, or directly within the M5-7 microcontroller integrated within an Imx8 or Rcar SOC.
 
@@ -60,7 +60,7 @@ At run time microservices are protected with a Linux MAC (Mandatory Access Contr
 
 When talking with the cloud or an external device (I.e. phone, tablet) the application framework switches from kernel security to Internet security and uses oAuth2 and OpenIDconnect to request authentication/authorization tokens that will later replace MAC token as input to the Cynara access control data base.
 
-![micro-service security model](images/smack-token-security-archi-intro.png)
+![micro-service security model](images/smack-token-security-archi-Intro.png){:: style="margin:auto; display:flex; max-width:80%;"}
 
 For further details on security model check AGL security blueprint [^4]
 
@@ -74,7 +74,7 @@ Automotive Linux support in its current version CAN and J1939. For Redpesk@SEA, 
 
 Signaling split into low level binding that are in charge of decoding a binary message (N2K, CanOpen, Modbus, ...) into a high level structure that is easy to process by an application. Second level is handled by the signal composer that is in charge of composing message to build a functional signal when the boat moved more than 300m. The goal is this model is to reduce as close as possible from the acquisition the number of processed messages.
 
-![micro-service signaling model](images/signalling-service-archi-Intro.png)
+![micro-service signaling model](images/signalling-service-archi-Intro.png){:: style="margin:auto; display:flex; max-width:80%;"}
 
 For further details on signaling model check[^7]
 
@@ -86,7 +86,7 @@ In a first run, chart service should be able to provide a vector tile service co
 
 We also target a basic "safe routing" service. This service might leverage H3 Uber’s Hexagonal Hierarchical Spatial Index [^9] to provide an electronic version of "second captain" that permanently controls if current boat direction is safe or not. The initial version might be limited to static information like maritime charts sounding information or AIS history, nevertheless in a second version we should also leverage dynamic information as Radar, realtime sounding, ...
 
-![micro-service chart model](images/chart-service-archi-Intro.png)
+![micro-service chart model](images/chart-service-archi-Intro.png){:: style="margin:auto; display:flex; max-width:80%;"}
 
 ### Cloud Connectivity
 
@@ -96,7 +96,7 @@ As by definition boat can get far enough from ground antenna to loose connectivi
 
 As cloud connectivity, the initial implementation proposes a mechanism not only to secure stream from/to the cloud, but also a standard option to stage data on the edge waiting for adequate connectivity to be available.
 
-![micro-service cloud model](images/cloud-service-archi-Intro.png)
+![micro-service cloud model](images/cloud-service-archi-Intro.png){:: style="margin:auto; display:flex; max-width:80%;"}
 
 ### Native Graphic
 
@@ -114,7 +114,7 @@ Monitoring is a key requirement for any long term supported system. Monitoring s
 
 Redpesk@SEA inherits from Automotive Linux application framework monitoring capabilities, it can introspect service API, hook incoming/outgoing messages and support a standard monitoring of Linux general behavior (CPU, RAM, Network, ...). All collected data can either be displayed in realtime (debug case) or stored in a timeserie database for further use with standard tools as Graphana or others.
 
-![micro-service monitoring model](images/monitoring-service-archi-Intro.png)
+![micro-service monitoring model](images/monitoring-service-archi-Intro.png){:: style="margin:auto; display:flex; max-width:80%;"}
 
 ### Multimedia
 
@@ -128,7 +128,7 @@ Audio requirement for Automotive is probably too complex for maritime usage and 
 
 In order to minimize the impact on existing Linux applications, the system should provide an ALSA interface for audio stream and use an independent set of API to manage privilege and security policies.
 
-![micro-service audio model](images/audio-service-archi-Intro.png)
+![micro-service audio model](images/audio-service-archi-Intro.png){:: style="margin:auto; display:flex; max-width:80%;"}
 
 
 [^1]: http://automotivelinux.org
