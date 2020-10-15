@@ -60,7 +60,7 @@ At run time microservices are protected with a Linux MAC (Mandatory Access Contr
 
 When talking with the cloud or an external device (I.e. phone, tablet) the application framework switches from kernel security to Internet security and uses oAuth2 and OpenIDconnect to request authentication/authorization tokens that will later replace MAC token as input to the Cynara access control data base.
 
-![micro-service security model](images/smack-token-security.png)
+![micro-service security model](images/smack-token-security-archi-intro.png)
 
 For further details on security model check AGL security blueprint [^4]
 
