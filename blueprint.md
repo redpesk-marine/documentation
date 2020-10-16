@@ -130,6 +130,14 @@ In order to minimize the impact on existing Linux applications, the system shoul
 
 ![micro-service audio model](images/audio-service-archi-Intro.png){:: style="margin:auto; display:flex; max-width:80%;"}
 
+# How to contribute
+
+Contribute to the project by joining us on `matrix.org` in our Redpesk@ Marine dedicated room: 
+`#redpesk@sea:matrix.org`
+
+<br />
+<br />
+<br />
 
 [^1]: http://automotivelinux.org
 [^2]: http://redpesk.bzh
