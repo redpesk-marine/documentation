@@ -7,5 +7,5 @@ books:
     author:
     version: master
     chapters:
-      - url: "README.md"
-        name: Introduction
+      - url: "blueprint.md"
+        name: Blueprint

@@ -38,7 +38,7 @@ Are excluded from goals:
 
 # Architecture
 
-## API based Micro Service Architecture
+## API based Micro Service
 
 The application architecture is directly inherited from AGL[^1] and is based on latest version of the application framework[^3].
 
@@ -64,11 +64,11 @@ When talking with the cloud or an external device (I.e. phone, tablet) the appli
 
 For further details on security model check AGL security blueprint [^4]
 
-## Core Services
+# Core Services
 
 While Redpesk@SEA is fully open an may potentially support any kind of services. Most user expect some core services to be provided "out-of-the-box". This list of core services may expend in the future, but as today we expect to ship with default opensource version following components:
 
-### Signaling
+## Signaling
 
 Automotive Linux support in its current version CAN and J1939. For Redpesk@SEA, IoT.bzh already added support for CanOpen and Modbus as well as as a reverse engineered version of NMEA2000[^5] based on Canboat[^6] and other works.
 
@@ -78,7 +78,7 @@ Signaling split into low level binding that are in charge of decoding a binary m
 
 For further details on signaling model check[^7]
 
-### Chart & Routing
+## Chart & Routing
 
 Redpesk@SEA aims at providing core low level chart service. A full UI as OpenCPN or QtVLM remains out of scope. Nevertheless we aim at providing a strong chart core set of chart services to help that the community to easily develop multiple user interfaces targeting the difference class of maritime users (leisure, fisherman, researcher, ship-yard, harbour, ...).
 
@@ -88,7 +88,7 @@ We also target a basic "safe routing" service. This service might leverage H3 Ub
 
 ![micro-service chart model](images/chart-service-archi-Intro.png){:: style="margin:auto; display:flex; max-width:80%;"}
 
-### Cloud Connectivity
+## Cloud Connectivity
 
 Exchanging data with Internet for both incoming and outgoing streams in a secure manner is critical to support many modern use cases. This secure connection is required to support both external devices (phone, tablet) connecting directly on a boat gateway, or 4G/Satellite connectivity with a cloud service.
 
@@ -98,13 +98,13 @@ As cloud connectivity, the initial implementation proposes a mechanism not only 
 
 ![micro-service cloud model](images/cloud-service-archi-Intro.png){:: style="margin:auto; display:flex; max-width:80%;"}
 
-### Native Graphic
+## Native Graphic
 
 While not everyone requires native graphic support, anyone who needs to support an embedded screen to display UI will need some form of graphical support.
 
 For remote UI, HTML5 is the magic wand. Unfortunately for native screen support, Wayland only provides very low level API and needs to be complemented in order to support application developers. In order to support Linux existing UI, the system should support XDG as well as some hight level compositor foundation as WLRoot, Fluter or others. While no compositor will ever support every use cases, reference implementation should support one that enable people to get native UI working almost our of the box.
 
-### Monitoring
+## Monitoring
 
 Monitoring is a key requirement for any long term supported system. Monitoring should be able to support multiple use cases as:
 
@@ -116,7 +116,7 @@ Redpesk@SEA inherits from Automotive Linux application framework monitoring capa
 
 ![micro-service monitoring model](images/monitoring-service-archi-Intro.png){:: style="margin:auto; display:flex; max-width:80%;"}
 
-### Multimedia
+## Multimedia
 
 Audio requirement for Automotive is probably too complex for maritime usage and redpesk@sea might only use a subset of AGL audio system. Nevertheless some key functionalities as zones, roles, priorities, ... may soon become hard requirements. At minimum we target:
 
