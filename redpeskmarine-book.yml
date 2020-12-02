@@ -1,11 +1,20 @@
 type: books
 books:
   - id: redpeskmarine-book
-    title: "Redpesk® Marine"
+    title: Blueprint
     description:
     keywords:
     author:
     version: master
     chapters:
-      - url: "blueprint.md"
-        name: Blueprint
+      # - url: "blueprint.md"
+      #   name: Blueprint
+      - url: "0_introduction.md"
+        name: Introduction
+      - url: "1_architecture.md"
+        name: Architecture
+      - url: "2_core-services.md"
+        name: Core Services
+      - url: "3_how-to-contribute.md"
+        name: How to contribute
+
