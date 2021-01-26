@@ -20,7 +20,7 @@ Provide a modern open platform dedicated to next generation of marine embedded a
 * Open Software architecture
   * Builtin Cybersecurity model
   * API centric and Microservice based architecture
-  * Allow final solution to mix OpenSource and proprietary softwares
+  * Allow final solution to mix open source and proprietary softwares
   * Long term support targeting 10 years or more
   * ...
 
@@ -52,7 +52,7 @@ Previous graphic represents a full feature system. An entry cost system could us
 
 ## Cyber-Security
 
-Redpesk@SEA relies on the latest version of Automotive Linux security models.
+redpesk@SEA relies on the latest version of Automotive Linux security models.
 
 At installation time, not only is each packet signature verified, but each checksum file contain is also controlled. Services are installed and ran with minimal required privileges. As redpesk is a package based distribution, it is possible to update atomically services.
 
@@ -66,11 +66,11 @@ For further details on security model check AGL security blueprint [^4]
 
 # Core Services
 
-While Redpesk@SEA is fully open an may potentially support any kind of services. Most user expect some core services to be provided "out-of-the-box". This list of core services may expend in the future, but as today we expect to ship with default opensource version following components:
+While redpesk@SEA is fully open an may potentially support any kind of services. Most user expect some core services to be provided "out-of-the-box". This list of core services may expend in the future, but as today we expect to ship with default open source version following components:
 
 ## Signaling
 
-Automotive Linux support in its current version CAN and J1939. For Redpesk@SEA, IoT.bzh already added support for CanOpen and Modbus as well as as a reverse engineered version of NMEA2000[^5] based on Canboat[^6] and other works.
+Automotive Linux support in its current version CAN and J1939. For redpesk@SEA, IoT.bzh already added support for CanOpen and Modbus as well as as a reverse engineered version of NMEA2000[^5] based on Canboat[^6] and other works.
 
 Signaling split into low level binding that are in charge of decoding a binary message (N2K, CanOpen, Modbus, ...) into a high level structure that is easy to process by an application. Second level is handled by the signal composer that is in charge of composing message to build a functional signal when the boat moved more than 300m. The goal is this model is to reduce as close as possible from the acquisition the number of processed messages.
 
@@ -80,7 +80,7 @@ For further details on signaling model check[^7]
 
 ## Chart & Routing
 
-Redpesk@SEA aims at providing core low level chart service. A full UI as OpenCPN or QtVLM remains out of scope. Nevertheless we aim at providing a strong chart core set of chart services to help that the community to easily develop multiple user interfaces targeting the difference class of maritime users (leisure, fisherman, researcher, ship-yard, harbour, ...).
+redpesk@SEA aims at providing core low level chart service. A full UI as OpenCPN or QtVLM remains out of scope. Nevertheless we aim at providing a strong chart core set of chart services to help that the community to easily develop multiple user interfaces targeting the difference class of maritime users (leisure, fisherman, researcher, ship-yard, harbour, ...).
 
 In a first run, chart service should be able to provide a vector tile service compatible with Mapbox. Chart service should support both a realtime service to serve tiles on demand to UI clients through a standard set of APIs, as well as an out of band service to translate with GDAL or equivalent technology charts from their delivery format(S57,S101,...) into a set of vector tiles compatible with Mapbox vector tiles format[^8]
 
@@ -112,7 +112,7 @@ Monitoring is a key requirement for any long term supported system. Monitoring s
 * Collecting long term data track when doing final in situation QA test
 * On line data collection to track security break, functional errors, usage patterns, ...
 
-Redpesk@SEA inherits from Automotive Linux application framework monitoring capabilities, it can introspect service API, hook incoming/outgoing messages and support a standard monitoring of Linux general behavior (CPU, RAM, Network, ...). All collected data can either be displayed in realtime (debug case) or stored in a timeserie database for further use with standard tools as Graphana or others.
+redpesk@SEA inherits from Automotive Linux application framework monitoring capabilities, it can introspect service API, hook incoming/outgoing messages and support a standard monitoring of Linux general behavior (CPU, RAM, Network, ...). All collected data can either be displayed in realtime (debug case) or stored in a timeserie database for further use with standard tools as Graphana or others.
 
 ![micro-service monitoring model](images/monitoring-service-archi-Intro.png){:: style="margin:auto; display:flex; max-width:80%;"}
 
@@ -132,7 +132,7 @@ In order to minimize the impact on existing Linux applications, the system shoul
 
 # How to contribute
 
-Contribute to the project by joining us on `matrix.org` in our Redpesk@ Marine dedicated room: 
+Contribute to the project by joining us on `matrix.org` in our redpesk@ Marine dedicated room: 
 `#redpesk@sea:matrix.org`
 
 <br />

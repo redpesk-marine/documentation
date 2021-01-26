@@ -1,6 +1,6 @@
 # Introduction
 
-This project targets a production ready marine grade Linux open platform. Its application and security model derives directly from [Automotive Grade Linux](http://automotivelinux.org) efforts, when production readiness and long term support relies on IoT.bzh continuous integration [redpesk®](http://redpesk.bzh) suite.
+This project targets a production ready marine grade Linux open platform. Its application and security model derives directly from [Automotive Grade Linux](http://automotivelinux.org) efforts, when production readiness and long term support relies on IoT.bzh continuous integration [redpesk](http://redpesk.bzh) suite.
 
 ## Goal
 
@@ -20,7 +20,7 @@ Provide a modern open platform dedicated to next generation of marine embedded a
 * Open Software architecture
   * Builtin Cybersecurity model
   * API centric and Microservice based architecture
-  * Allow final solution to mix OpenSource and proprietary softwares
+  * Allow final solution to mix open source and proprietary softwares
   * Long term support targeting 10 years or more
   * ...
 

@@ -1,6 +1,6 @@
 # How to contribute
 
-Contribute to the project by joining us on `matrix.org` in our Redpesk@ Marine dedicated room: 
+Contribute to the project by joining us on `matrix.org` in our redpesk@ Marine dedicated room: 
 `#redpesk@sea:matrix.org`
 
 <br />

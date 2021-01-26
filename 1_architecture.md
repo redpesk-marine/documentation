@@ -14,7 +14,7 @@ Previous graphic represents a full feature system. An entry cost system could us
 
 ## Cyber-Security
 
-Redpesk@SEA relies on the latest version of Automotive Linux security models.
+redpesk@SEA relies on the latest version of Automotive Linux security models.
 
 At installation time, not only is each packet signature verified, but each checksum file contain is also controlled. Services are installed and ran with minimal required privileges. As redpesk is a package based distribution, it is possible to update atomically services.
 
