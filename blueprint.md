@@ -132,7 +132,7 @@ In order to minimize the impact on existing Linux applications, the system shoul
 
 # How to contribute
 
-Contribute to the project by joining us on `matrix.org` in our redpesk@ Marine dedicated room: 
+Contribute to the project by joining us on `matrix.org` in our redpesk@ Marine dedicated room:
 `#redpesk@sea:matrix.org`
 
 <br />
@@ -147,5 +147,5 @@ Contribute to the project by joining us on `matrix.org` in our redpesk@ Marine d
 [^6]: https://github.com/canboat/canboat
 [^7]: https://iot.bzh/en/publications/32-2018/92-updated-overview-of-agl-signaling
 [^8]: https://docs.mapbox.com/vector-tiles/specification/
-[^9]: https://eng.uber.com/h3/
+[^9]: https://www.uber.com/en-FR/blog/h3/
 

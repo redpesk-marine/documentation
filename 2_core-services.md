@@ -18,7 +18,7 @@ redpesk@SEA aims at providing core low level chart service. A full UI as OpenCPN
 
 In a first run, chart service should be able to provide a vector tile service compatible with Mapbox. Chart service should support both a realtime service to serve tiles on demand to UI clients through a standard set of APIs, as well as an out of band service to translate with GDAL or equivalent technology charts from their delivery format(S57,S101,...) into a set of vector tiles compatible with [Mapbox vector tiles format](https://docs.mapbox.com/vector-tiles/specification/)
 
-We also target a basic "safe routing" service. This service might leverage [H3 Uber’s Hexagonal Hierarchical Spatial Index](https://eng.uber.com/h3/) to provide an electronic version of "second captain" that permanently controls if current boat direction is safe or not. The initial version might be limited to static information like maritime charts sounding information or AIS history, nevertheless in a second version we should also leverage dynamic information as Radar, realtime sounding, ...
+We also target a basic "safe routing" service. This service might leverage [H3 Uber’s Hexagonal Hierarchical Spatial Index](https://www.uber.com/en-FR/blog/h3/) to provide an electronic version of "second captain" that permanently controls if current boat direction is safe or not. The initial version might be limited to static information like maritime charts sounding information or AIS history, nevertheless in a second version we should also leverage dynamic information as Radar, realtime sounding, ...
 
 ![micro-service chart model](images/chart-service-archi-Intro.png){:: style="margin:auto; display:flex; max-width:80%;"}
 
