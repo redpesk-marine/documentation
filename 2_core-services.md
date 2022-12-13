@@ -4,7 +4,7 @@ While redpesk@SEA is fully open an may potentially support any kind of services.
 
 ## Signaling
 
-Automotive Linux support in its current version CAN and J1939. For redpesk@SEA, IoT.bzh already added support for CanOpen and Modbus as well as as a reverse engineered version of [NMEA2000](https://www.nmea.org/Assets/20090423%20rtcm%20white%20paper%20nmea%202000.pdf) based on [Canboat](https://github.com/canboat/canboat) and other works.
+Automotive Linux support in its current version CAN and J1939. For redpesk@SEA, IoT.bzh already added support for CanOpen and Modbus as well as as a reverse engineered version of [NMEA2000](https://www.nmea.org/nmea-2000.html) based on [Canboat](https://github.com/canboat/canboat) and other works.
 
 Signaling split into low level binding that are in charge of decoding a binary message (N2K, CanOpen, Modbus, ...) into a high level structure that is easy to process by an application. Second level is handled by the signal composer that is in charge of composing message to build a functional signal when the boat moved more than 300m. The goal is this model is to reduce as close as possible from the acquisition the number of processed messages.
 
